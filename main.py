@@ -100,6 +100,7 @@ for sem, subjects in semesters.items():
         all_credits.append(subject['credits'])
         with columns[4]:
             st.write(total_marks)
+    st.divider()
 
 # Calculate CGPA up to the selected semester
 cgpa = calculate_gpa(all_marks, all_credits)
