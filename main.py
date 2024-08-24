@@ -13,28 +13,28 @@ def load_semesters():
         st.error("Error: Invalid JSON in semesters.json file.")
         return {}
 
-def calculate_grade_point(marks):
-    if marks >= 80:
+def calculate_grade_point(marks, full_marks):
+    if marks/full_marks >= 0.8:
         return 4.0
-    elif marks >= 75:
+    elif marks/full_marks >= 0.75:
         return 3.7
-    elif marks >= 70:
+    elif marks/full_marks >= 0.70:
         return 3.3
-    elif marks >= 65:
+    elif marks/full_marks >= 0.65:
         return 3.0
-    elif marks >= 60:
+    elif marks/full_marks >= 0.60:
         return 2.7
-    elif marks >= 55:
+    elif marks/full_marks >= 0.55:
         return 2.3
-    elif marks >= 50:
+    elif marks/full_marks >= 0.50:
         return 2.0
-    elif marks >= 45:
+    elif marks/full_marks >= 0.45:
         return 1.7
     else:
         return 1.0
 
-def calculate_gpa(marks_list, credit_hours):
-    total_points = sum(calculate_grade_point(marks) * credit for marks, credit in zip(marks_list, credit_hours))
+def calculate_gpa(marks_list, credit_hours, full_marks_list):
+    total_points = sum(calculate_grade_point(marks, full_marks) * credit for marks, credit, full_marks in zip(marks_list, credit_hours, full_marks_list))
     total_credits = sum(credit_hours)
     return total_points / total_credits if total_credits != 0 else 0
 
@@ -59,6 +59,7 @@ semesters = load_semesters()
 selected_semester = st.selectbox("Select the semester to calculate CGPA up to:", list(semesters.keys()))
 
 all_marks = []
+full_marks = []
 all_credits = []
 
 for sem, subjects in semesters.items():
@@ -93,6 +94,7 @@ for sem, subjects in semesters.items():
                 key=f"{sem}_{subject['code']}_practical_final") if subject['practical_final'] is not None else None
 
         total_marks = sum(filter(None, [theory_ass, theory_final, practical_ass, practical_final]))
+        full_marks.append(sum(filter(None, [subject['theory_ass'], subject['theory_final'], subject['practical_ass'], subject['practical_final']])))
         all_marks.append(total_marks)
         all_credits.append(subject['credits'])
 
@@ -101,5 +103,5 @@ for sem, subjects in semesters.items():
 
     st.divider()
 
-cgpa = calculate_gpa(all_marks, all_credits)
+cgpa = calculate_gpa(all_marks, all_credits, full_marks)
 st.write(f"CGPA up to Semester {selected_semester}: {cgpa:.2f}")
