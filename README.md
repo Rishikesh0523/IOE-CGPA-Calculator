@@ -31,13 +31,13 @@ The data is structured by semesters, with the following information for each sub
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/Rishikesh0523/IOE-BCT-CGPA-Calculator.git
+   git clone https://github.com/Rishikesh0523/IOE-CGPA-Calculator.git
    ```
 
 2. **Navigate to the Project Directory**
 
    ```bash
-   cd IOE-BCT-CGPA-Calculator
+   cd IOE-CGPA-Calculator
    ```
 
 3. **Install Dependencies**
