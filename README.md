@@ -65,16 +65,7 @@ The data is structured by semesters, with the following information for each sub
 
 ## Example
 
-### Semester I/I
-
-| Subject                          | Theory Ass | Theory Final | Practical Ass | Practical Final | Total |
-|----------------------------------|------------|--------------|---------------|-----------------|-------|
-| SH401 - Engineering Mathematics I | 20         | 80           | -             | -               | 100   |
-| CT401 - Computer Programming      | 20         | 80           | 50            | -               | 150   |
-| ME401 - Engineering Drawing I     | -          | -            | 60            | 40              | 100   |
-| SH402 - Engineering Physics       | 20         | 80           | 20            | 30              | 150   |
-| CE401 - Applied Mechanics         | 20         | 80           | -             | -               | 100   |
-| EE401 - Basic Electrical Engineering | 20       | 80           | 25            | -               | 125   |
+![image](https://github.com/user-attachments/assets/3d88f3e4-1e44-47d8-9a65-841c1ae92dac)
 
 ## Contributing
 
