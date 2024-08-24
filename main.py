@@ -104,4 +104,4 @@ for sem, subjects in semesters.items():
     st.divider()
 
 cgpa = calculate_gpa(all_marks, all_credits, full_marks)
-st.write(f"CGPA up to Semester {selected_semester}: {cgpa:.2f}")
+st.write(f"CGPA up to Semester {selected_semester}: {cgpa:.3f}")
