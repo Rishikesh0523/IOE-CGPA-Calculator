@@ -4,8 +4,8 @@ import json
 def load_semesters():
     try:
         with open('semesters.json', 'r') as file:
-            semesters = json.load(file)
-        return semesters
+            data = json.load(file)
+        return data
     except FileNotFoundError:
         st.error("Error: semesters.json file not found.")
         return {}
@@ -38,7 +38,7 @@ def calculate_gpa(marks_list, credit_hours, full_marks_list):
     total_credits = sum(credit_hours)
     return total_points / total_credits if total_credits != 0 else 0
 
-st.set_page_config(page_title="IOE BCT CGPA Calculator", page_icon=":chart_with_upwards_trend:", layout="wide")
+st.set_page_config(page_title="IOE CGPA Calculator", page_icon=":chart_with_upwards_trend:", layout="wide")
 
 # Custom CSS to reduce input field padding
 st.markdown("""
@@ -52,56 +52,63 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.title("IOE BCT CGPA Calculator")
+st.title("IOE CGPA Calculator")
 
-semesters = load_semesters()
+data = load_semesters()
 
-selected_semester = st.selectbox("Select the semester to calculate CGPA up to:", list(semesters.keys()))
+# Field selection
+field = st.selectbox("Select your field of study:", ["BCT", "BEI"])
 
-all_marks = []
-full_marks = []
-all_credits = []
+if field in data:
+    semesters = data[field]
+    selected_semester = st.selectbox("Select the semester to calculate CGPA up to:", list(semesters.keys()))
 
-for sem, subjects in semesters.items():
-    if sem > selected_semester:
-        break
-    
-    st.header(f"Year: {sem.split('/')[0]}, Semester: {sem.split('/')[1]}")
+    all_marks = []
+    full_marks = []
+    all_credits = []
 
-    for subject in subjects:
-        st.subheader(f"{subject['title']} ({subject['code']})")
+    for sem, subjects in semesters.items():
+        if sem > selected_semester:
+            break
         
-        col1, col2, col3, col4, col5 = st.columns([2,2,2,2,1], gap="small")
+        st.header(f"Year: {sem.split('/')[0]}, Semester: {sem.split('/')[1]}")
 
-        with col1:
-            theory_ass = st.number_input(
-                "Theory Ass", min_value=0, max_value=subject['theory_ass'] or 0, 
-                key=f"{sem}_{subject['code']}_theory_ass") if subject['theory_ass'] is not None else None
+        for subject in subjects:
+            st.subheader(f"{subject['title']} ({subject['code']})")
+            
+            col1, col2, col3, col4, col5 = st.columns([2,2,2,2,1], gap="small")
 
-        with col2:
-            theory_final = st.number_input(
-                "Theory Final", min_value=0, max_value=subject['theory_final'] or 0, 
-                key=f"{sem}_{subject['code']}_theory_final") if subject['theory_final'] is not None else None
+            with col1:
+                theory_ass = st.number_input(
+                    "Theory Ass", min_value=0, max_value=subject['theory_ass'] or 0, 
+                    key=f"{field}_{sem}_{subject['code']}_theory_ass") if subject['theory_ass'] is not None else None
 
-        with col3:
-            practical_ass = st.number_input(
-                "Practical Ass", min_value=0, max_value=subject['practical_ass'] or 0, 
-                key=f"{sem}_{subject['code']}_practical_ass") if subject['practical_ass'] is not None else None
+            with col2:
+                theory_final = st.number_input(
+                    "Theory Final", min_value=0, max_value=subject['theory_final'] or 0, 
+                    key=f"{field}_{sem}_{subject['code']}_theory_final") if subject['theory_final'] is not None else None
 
-        with col4:
-            practical_final = st.number_input(
-                "Practical Final", min_value=0, max_value=subject['practical_final'] or 0, 
-                key=f"{sem}_{subject['code']}_practical_final") if subject['practical_final'] is not None else None
+            with col3:
+                practical_ass = st.number_input(
+                    "Practical Ass", min_value=0, max_value=subject['practical_ass'] or 0, 
+                    key=f"{field}_{sem}_{subject['code']}_practical_ass") if subject['practical_ass'] is not None else None
 
-        total_marks = sum(filter(None, [theory_ass, theory_final, practical_ass, practical_final]))
-        full_marks.append(sum(filter(None, [subject['theory_ass'], subject['theory_final'], subject['practical_ass'], subject['practical_final']])))
-        all_marks.append(total_marks)
-        all_credits.append(subject['credits'])
+            with col4:
+                practical_final = st.number_input(
+                    "Practical Final", min_value=0, max_value=subject['practical_final'] or 0, 
+                    key=f"{field}_{sem}_{subject['code']}_practical_final") if subject['practical_final'] is not None else None
 
-        with col5:
-            st.metric("Total", total_marks)
+            total_marks = sum(filter(None, [theory_ass, theory_final, practical_ass, practical_final]))
+            full_marks.append(sum(filter(None, [subject['theory_ass'], subject['theory_final'], subject['practical_ass'], subject['practical_final']])))
+            all_marks.append(total_marks)
+            all_credits.append(subject['credits'])
 
-    st.divider()
+            with col5:
+                st.metric("Total", total_marks)
 
-cgpa = calculate_gpa(all_marks, all_credits, full_marks)
-st.write(f"CGPA up to Semester {selected_semester}: {cgpa:.3f}")
+        st.divider()
+
+    cgpa = calculate_gpa(all_marks, all_credits, full_marks)
+    st.write(f"CGPA up to Semester {selected_semester}: {cgpa:.3f}")
+else:
+    st.error(f"No data available for {field}. Please check your semesters.json file.")

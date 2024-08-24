@@ -1,4 +1,5 @@
 {
+    "BCT":{
     "I/I": [
         {"code": "SH401", "title": "Engineering Mathematics I", "type": "T", "theory_ass": 20, "theory_final": 80, "practical_ass": null, "practical_final": null, "credits": 3},
         {"code": "CT401", "title": "Computer Programming", "type": "B", "theory_ass": 20, "theory_final": 80, "practical_ass": 50, "practical_final": null, "credits": 3},
@@ -70,4 +71,78 @@
         {"code": "ELECTIVE II", "title": "Elective II", "type": "B", "theory_ass": 20, "theory_final": 80, "practical_ass": 25, "practical_final": null, "credits": 3},
         {"code": "ELECTIVE III", "title": "Elective III", "type": "B", "theory_ass": 20, "theory_final": 80, "practical_ass": 25, "practical_final": null, "credits": 3}
     ]
+},
+"BEI":{
+    "I/I": [
+        {"code": "SH401", "title": "Engineering Mathematics I", "type": "T", "theory_ass": 20, "theory_final": 80, "practical_ass": null, "practical_final": null, "credits": 3},
+        {"code": "CT401", "title": "Computer Programming", "type": "B", "theory_ass": 20, "theory_final": 80, "practical_ass": 50, "practical_final": null, "credits": 3},
+        {"code": "ME401", "title": "Engineering Drawing I", "type": "P", "theory_ass": null, "theory_final": null, "practical_ass": 60, "practical_final": 40, "credits": 4},
+        {"code": "SH402", "title": "Engineering Physics", "type": "B", "theory_ass": 20, "theory_final": 80, "practical_ass": 20, "practical_final": 30, "credits": 4},
+        {"code": "CE401", "title": "Applied Mechanics", "type": "T", "theory_ass": 20, "theory_final": 80, "practical_ass": null, "practical_final": null, "credits": 3},
+        {"code": "EE401", "title": "Basic Electrical Engineering", "type": "B", "theory_ass": 20, "theory_final": 80, "practical_ass": 25, "practical_final": null, "credits": 3}
+    ],
+    "I/II": [
+        {"code": "SH451", "title": "Engineering Mathematics II", "type": "T", "theory_ass": 20, "theory_final": 80, "practical_ass": null, "practical_final": null, "credits": 3},
+        {"code": "ME451", "title": "Engineering Drawing II", "type": "P", "theory_ass": null, "theory_final": null, "practical_ass": 60, "practical_final": 40, "credits": 4},
+        {"code": "EX451", "title": "Basic Electronics Engineering", "type": "B", "theory_ass": 20, "theory_final": 80, "practical_ass": 25, "practical_final": null, "credits": 3},
+        {"code": "SH453", "title": "Engineering Chemistry", "type": "B", "theory_ass": 20, "theory_final": 80, "practical_ass": 20, "practical_final": 30, "credits": 3},
+        {"code": "ME452", "title": "Fundamental of Thermodynamics & Heat Transfer", "type": "B", "theory_ass": 20, "theory_final": 80, "practical_ass": 25, "practical_final": null, "credits": 3},
+        {"code": "ME453", "title": "Workshop Technology", "type": "B", "theory_ass": 10, "theory_final": null, "practical_ass": 40, "practical_final": null, "credits": 1}
+    ],
+    "II/I": [
+        {"code": "SH501", "title": "Engineering Mathematics III", "type": "T", "theory_ass": 20, "theory_final": 80, "practical_ass": null, "practical_final": null, "credits": 4},
+        {"code": "CT501", "title": "Object Oriented Programming", "type": "B", "theory_ass": 20, "theory_final": 80, "practical_ass": 50, "practical_final": null, "credits": 4},
+        {"code": "EE501", "title": "Electric Circuit Theory", "type": "B", "theory_ass": 20, "theory_final": 80, "practical_ass": 25, "practical_final": null, "credits": 3},
+        {"code": "CT502", "title": "Theory of Computation", "type": "T", "theory_ass": 20, "theory_final": 80, "practical_ass": null, "practical_final": null, "credits": 3},
+        {"code": "EX501", "title": "Electronic Devices & Circuits", "type": "B", "theory_ass": 20, "theory_final": 80, "practical_ass": 25, "practical_final": null, "credits": 3},
+        {"code": "EX502", "title": "Digital Logic", "type": "B", "theory_ass": 20, "theory_final": 80, "practical_ass": 50, "practical_final": null, "credits": 4},
+        {"code": "EX503", "title": "Electromagnetics", "type": "B", "theory_ass": 20, "theory_final": 80, "practical_ass": 25, "practical_final": null, "credits": 3}
+    ],
+    "II/II": [
+        {"code": "EE554", "title": "Electrical Machine", "type": "B", "theory_ass": 20, "theory_final": 80, "practical_ass": 25, "practical_final": null, "credits": 3},
+        {"code": "SH553", "title": "Numerical Methods", "type": "B", "theory_ass": 20, "theory_final": 80, "practical_ass": 50, "practical_final": null, "credits": 4},
+        {"code": "SH551", "title": "Applied Mathematics", "type": "T", "theory_ass": 20, "theory_final": 80, "practical_ass": null, "practical_final": null, "credits": 4},
+        {"code": "EE552", "title": "Instrumentation I", "type": "B", "theory_ass": 20, "theory_final": 80, "practical_ass": 25, "practical_final": null, "credits": 3},
+        {"code": "CT552", "title": "Data Structure & Algorithm", "type": "B", "theory_ass": 20, "theory_final": 80, "practical_ass": 50, "practical_final": null, "credits": 4},
+        {"code": "EX551", "title": "Microprocessor", "type": "B", "theory_ass": 20, "theory_final": 80, "practical_ass": 50, "practical_final": null, "credits": 4},
+        {"code": "CT551", "title": "Discrete Structure", "type": "T", "theory_ass": 20, "theory_final": 80, "practical_ass": null, "practical_final": null, "credits": 3}
+    ],
+    "III/I": [
+        {"code": "SH601", "title": "Communication English", "type": "B", "theory_ass": 20, "theory_final": 80, "practical_ass": 25, "practical_final": null, "credits": 3},
+        {"code": "CT601", "title": "Software Engineering", "type": "B", "theory_ass": 20, "theory_final": 80, "practical_ass": 25, "practical_final": null, "credits": 3},
+        {"code": "SH602", "title": "Probability & Statistics", "type": "T", "theory_ass": 20, "theory_final": 80, "practical_ass": null, "practical_final": null, "credits": 3},
+        {"code": "EX602", "title": "Instrumentation II", "type": "B", "theory_ass": 20, "theory_final": 80, "practical_ass": 25, "practical_final": null, "credits": 3},
+        {"code": "EX603", "title": "Computer Graphics", "type": "B", "theory_ass": 20, "theory_final": 80, "practical_ass": 50, "practical_final": null, "credits": 4},
+        {"code": "CT602", "title": "Data Communication", "type": "B", "theory_ass": 20, "theory_final": 80, "practical_ass": 25, "practical_final": null, "credits": 3},
+        {"code": "CT603", "title": "Computer Organization & Architecture", "type": "B", "theory_ass": 20, "theory_final": 80, "practical_ass": 25, "practical_final": null, "credits": 3}
+    ],
+    "III/II": [
+        {"code": "CE655", "title": "Engineering Economics", "type": "T", "theory_ass": 20, "theory_final": 80, "practical_ass": null, "practical_final": null, "credits": 3},
+        {"code": "CT655", "title": "Embedded System", "type": "B", "theory_ass": 20, "theory_final": 80, "practical_ass": 25, "practical_final": null, "credits": 3},
+        {"code": "CT653", "title": "Artificial Intelligence", "type": "B", "theory_ass": 20, "theory_final": 80, "practical_ass": 25, "practical_final": null, "credits": 3},
+        {"code": "CT652", "title": "Database Management System", "type": "B", "theory_ass": 20, "theory_final": 80, "practical_ass": 50, "practical_final": null, "credits": 4},
+        {"code": "CT651", "title": "Object Oriented Analysis & Design", "type": "B", "theory_ass": 20, "theory_final": 80, "practical_ass": 25, "practical_final": null, "credits": 3},
+        {"code": "CT656", "title": "Operating System", "type": "B", "theory_ass": 20, "theory_final": 80, "practical_ass": 25, "practical_final": null, "credits": 3},
+        {"code": "CT654", "title": "Minor Project", "type": "P", "theory_ass": null, "theory_final": null, "practical_ass": 50, "practical_final": 25, "credits": 2}
+    ],
+    "IV/I": [
+        {"code": "CT701", "title": "Project Management", "type": "T", "theory_ass": 20, "theory_final": 80, "practical_ass": null, "practical_final": null, "credits": 3},
+        {"code": "CT702", "title": "Computer Network", "type": "B", "theory_ass": 20, "theory_final": 80, "practical_ass": 50, "practical_final": null, "credits": 4},
+        {"code": "CT703", "title": "Distributed System", "type": "B", "theory_ass": 20, "theory_final": 80, "practical_ass": 25, "practical_final": null, "credits": 3},
+        {"code": "CT704", "title": "Digital Signal Analysis & Processing", "type": "B", "theory_ass": 20, "theory_final": 80, "practical_ass": 25, "practical_final": null, "credits": 3},
+        {"code": "CT707", "title": "Project I", "type": "P", "theory_ass": null, "theory_final": null, "practical_ass": 50, "practical_final": null, "credits": 2},
+        {"code": "EX701", "title": "Energy Environment & Society", "type": "T", "theory_ass": 10, "theory_final": 40, "practical_ass": null, "practical_final": null, "credits": 2},
+        {"code": "ME708", "title": "Organization & Management", "type": "T", "theory_ass": 20, "theory_final": 80, "practical_ass": null, "practical_final": null, "credits": 3},
+        {"code": "ELECTIVE I", "title": "Elective I", "type": "B", "theory_ass": 20, "theory_final": 80, "practical_ass": 25, "practical_final": null, "credits": 3}
+    ],
+    "IV/II": [
+        {"code": "CE752", "title": "Engineering Professional Practice", "type": "T", "theory_ass": 10, "theory_final": 40, "practical_ass": null, "practical_final": null, "credits": 2},
+        {"code": "CT751", "title": "Information Systems", "type": "T", "theory_ass": 20, "theory_final": 80, "practical_ass": null, "practical_final": null, "credits": 3},
+        {"code": "CT753", "title": "Simulation & Modeling", "type": "B", "theory_ass": 20, "theory_final": 80, "practical_ass": 25, "practical_final": null, "credits": 3},
+        {"code": "CT754", "title": "Internet & Intranet", "type": "B", "theory_ass": 20, "theory_final": 80, "practical_ass": 25, "practical_final": null, "credits": 3},
+        {"code": "CT755", "title": "Project II", "type": "P", "theory_ass": null, "theory_final": null, "practical_ass": 50, "practical_final": 50, "credits": 3},
+        {"code": "ELECTIVE II", "title": "Elective II", "type": "B", "theory_ass": 20, "theory_final": 80, "practical_ass": 25, "practical_final": null, "credits": 3},
+        {"code": "ELECTIVE III", "title": "Elective III", "type": "B", "theory_ass": 20, "theory_final": 80, "practical_ass": 25, "practical_final": null, "credits": 3}
+    ]
+}
 }
