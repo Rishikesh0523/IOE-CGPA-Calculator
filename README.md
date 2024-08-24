@@ -4,6 +4,8 @@
 
 The CGPA Calculator is a Python-based application designed to help students calculate their Cumulative Grade Point Average (CGPA) based on their semester marks. This tool provides a user-friendly interface where students can input their marks and credits for different subjects across multiple semesters. It allows calculation up to a specified semester and displays results in a tabular format.
 
+*Note: Currently Supports BCT and BEI programmes*
+
 ## Features
 
 - **Dynamic Semester Selection**: Choose the number of semesters for which you want to calculate the CGPA.
