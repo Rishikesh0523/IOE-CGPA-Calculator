@@ -136,7 +136,7 @@
         {"code": "CT751", "title": "Information Systems", "type": "T", "theory_ass": 20, "theory_final": 80, "practical_ass": null, "practical_final": null, "credits": 3},
         {"code": "EX703", "title": "Telecommunications", "type": "B", "theory_ass": 20, "theory_final": 80, "practical_ass": 25, "practical_final": null, "credits": 3},
         {"code": "EX701", "title": "Energy Environment & Society", "type": "T", "theory_ass": 10, "theory_final": 40, "practical_ass": null, "practical_final": null, "credits": 2},
-        {"code": "CT755", "title": "Project II", "type": "P", "theory_ass": null, "theory_final": null, "practical_ass": 50, "practical_final": 50, "credits": 3},
+        {"code": "EX755", "title": "Project II", "type": "P", "theory_ass": null, "theory_final": null, "practical_ass": 50, "practical_final": 50, "credits": 3},
         {"code": "ELECTIVE II", "title": "Elective II", "type": "B", "theory_ass": 20, "theory_final": 80, "practical_ass": 25, "practical_final": null, "credits": 3},
         {"code": "ELECTIVE III", "title": "Elective III", "type": "B", "theory_ass": 20, "theory_final": 80, "practical_ass": 25, "practical_final": null, "credits": 3}
     ]
