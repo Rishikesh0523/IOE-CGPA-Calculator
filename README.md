@@ -1,4 +1,4 @@
-# CGPA Calculator
+# IOE CGPA Calculator
 
 ## Overview
 
